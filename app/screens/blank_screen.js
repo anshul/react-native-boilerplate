@@ -52,3 +52,4 @@ export default connect(
   stateToProps,
   actions
 )(BlankScreen);
+
