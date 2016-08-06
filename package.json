@@ -3,10 +3,24 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "flow": "$(npm bin)/flow",
+    "postinstall": "remotedev-debugger; find ./node_modules/react-native-keyboard-aware-scroll-view  ./node_modules/native-base  -name '*.js' -print0 | xargs -0 sed -i '' 's/@flow/@noflow/g' ",
     "start": "node node_modules/react-native/local-cli/cli.js start"
   },
   "dependencies": {
+    "moment": "2.14.1",
+    "native-base": "0.5.4",
     "react": "15.2.1",
-    "react-native": "0.31.0"
+    "react-native": "0.31.0",
+    "react-native-code-push": "1.14.1-beta",
+    "react-redux": "4.4.5",
+    "redux": "3.5.2",
+    "redux-thunk": "2.1.0",
+    "rx": "4.1.0"
+  },
+  "devDependencies": {
+    "flow-bin": "^0.29.0",
+    "remote-redux-devtools": "^0.4.1",
+    "remote-redux-devtools-on-debugger": "^0.6.0"
   }
 }
